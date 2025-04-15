@@ -30,6 +30,7 @@ body{
     background-image: url(assets/bg.jpg);
     background-size: fill;
     background-position: center;
+    font-size: 12px;
 }
 
 #header{
@@ -122,8 +123,15 @@ nav ul li a:hover::after{
 .about-col-1 img{
     width: 90%;
     border-radius: 20px;
-    background-color: #0F0F11;    
+    background-color: #0F0F11;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;    
 }
+
+.about-col-1 img:hover {
+    box-shadow: 0 0 16px #7F3DF3aa, 0 0 32px #A867F8aa;
+    transform: scale(1.02);
+}
+
 .about-col-2{
     flex: 65%
 }
@@ -142,6 +150,7 @@ nav ul li a:hover::after{
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 10px #7F3DF3aa;
+    font-family: "JetBrains Mono", monospace;
 }
 
 .about-titles{
@@ -156,4 +165,76 @@ nav ul li a:hover::after{
     font-weight: 100;
     cursor: pointer;
     position: relative;
+}
+
+.about-links:after{
+   content: '';
+   width: 0;
+   height: 3px;
+   background: #A867F8;
+   position: absolute;
+   left: 0;
+   bottom: -8px;
+   transition: 300ms;
+}
+
+.about-links.active::after{
+    width: 50%;
+}
+
+.about-contents ul li{
+    list-style: none;
+    margin: 10px
+}
+
+.about-contents ul li span{
+    font-size: 12px;
+}
+
+.about-contents{
+    display: none;
+}
+
+.about-contents.active{
+    display: block;
+}
+
+/* technologies */
+
+#technologies{
+    padding: 30px 0;
+}
+
+.technologies-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.technologies-list div{
+    background: #0F0F11;
+    padding: 40px;
+    font-size: 12px;
+    border-radius: 20px;
+    border-right: 10px;
+}
+
+.technologies-list div:hover{
+    background: #7F3DF3aa;
+}
+
+.technologies-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.technologies-list div h2{
+    font-size: 30px;
+    font-weight: 100;
+    margin-bottom: 15px;
+}
+
+.technologies-list p{
+    font-family: "JetBrains Mono", monospace;
 }

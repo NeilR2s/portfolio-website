@@ -5,12 +5,16 @@
         <meta name = "viewport" content = "width = device-width, initial-scale=1.0">
         <link href = "styles.css" rel = "stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/960cb323e7.js" crossorigin="anonymous"></script>
         <title>Artus Portfolio</title>
 
     </head>
 
     <body>
+
         <!-- HEADER STUFF -->
+
         <div id="header">
             <div class="container">
                 <nav>
@@ -28,28 +32,106 @@
                 </div>
             </div>
         <div>
+
         <!-- ABOUT STUFF -->
+
         <div id="about">
             <div class="container">
+
                 <div class="row">
+
                     <div class="about-col-1">
                         <img src="assets/profile.png">
                     </div>
+
                     <div class="about-col-2">
+
                         <h1>About Me</h1>
                         <p>Pragmatic <span>Backend Developer</span> with expertise in AI-powered web applications, backend systems, and data science.</p>
+
                         <div class="about-titles">
-                            <p class="about-links">Skills</p>
-                            <p class="about-links">Experience</p>
-                            <p class="about-links">Education</p>
+                            <p class="about-links active" onclick="opentab('skills')">Skills</p>
+                            <p class="about-links" onclick="opentab('experience')">Experience</p>
+                            <p class="about-links" onclick="opentab('education')">Education</p>
                         </div> 
+
+                        <div class="about-contents active" id ="skills">
+                            <ul>
+                                <li><span>Backend Development</span><br>Using Python Web Frameworks</li>
+                                <li><span>Machine Learning</span><br>Using Scikit-learn and Tensorflow</li>
+                                <li><span>Command Line Tools</span><br>Automating Menial Tasks with Python Scripts</li>
+                            </ul>
+                        </div>
+
+                        <div class="about-contents" id="experience">
+                            <ul>
+                                <li><span>2024-Present</span><br>Full-Stack Developer Mediseen</li>
+                                <li><span>2025</span><br>UI-UX Sikaptala (Ideathon)</li>
+                                <li><span>2025</span><br>AI Developer Freelance (Raspberry Pi)</li>
+                            </ul>
+                        </div>
+
+                        <div class="about-contents" id="education">
+                            <ul>
+                                <li><span>2022-2026</span><br>De La Salle University - Dasmariñas</li>
+                            </ul>
+                        </div>
+
                     </div>
                 
                 </div>
+
             </div>
         </div>
 
+    <!-- services -->
+    <div id="technologies">
+
+        <div class="container">
+
+            <h1>Technologies</h1>
+
+            <div class="technologies-list">
+
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Languages</h2>
+                    <p>Python, Javascript, SQL</p>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <h2>Frameworks</h2>
+                    <p>Flask, Pandas, Numpy, Tensorflow, Torch, OpenCV, Scikit-Learn, Matplotlib</p>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-ubuntu"></i>
+                    <h2>Dev Tools</h2>
+                    <p>Bash CLI, Git, Docker, Anaconda, NGINX, Tmux, Linux</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
     </body>
+
+    <script>
+        let aboutLinks =  document.getElementsByClassName("about-links")
+        let aboutContents =  document.getElementsByClassName("about-contents")
+
+        function opentab(kwargs){
+            for (link of aboutLinks){
+                link.classList.remove("active")
+            }
+            for (content of aboutContents){
+                content.classList.remove("active")
+            }
+            event.currentTarget.classList.add("active")
+            document.getElementById(kwargs).classList.add("active")
+        }
+    </script>
 
 
 </html>
