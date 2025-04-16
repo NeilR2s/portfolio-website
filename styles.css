@@ -6,21 +6,19 @@
     box-sizing: border-box;
 }
 
+#about,
+#technologies,
+#portfolio,
+#contact {
+    padding: 5rem 0; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
 /* 
 COLOR PALETTE
 
-Primary: #B667F1
-Background: #0F0F11
-Background2: #1C1C20
-Text1: #F1F1F1
-Text2: #B3B3B3
-Glow Accent: #C58BFF
-Code Green: #6EF3A5
-Error Red: #FF5F79
-Cyan Edge: #6FD2FF
-
-Gradient: linear-gradient(135deg, #B667F1, #C58BFF)
-Box Shadow: box-shadow: 0 0 10px #B667F1aa;
 */
 
 
@@ -28,9 +26,10 @@ body{
     background: #0F0F11;
     color: #F1F1F1;
     background-image: url(assets/bg.jpg);
-    background-size: fill;
+    background-size: contain;
     background-position: center;
-    font-size: 12px;
+    background-attachment: fixed;
+    font-size: 0.75rem;
 }
 
 #header{
@@ -40,7 +39,7 @@ body{
 
 /* header and stuff */
 .container{
-    padding: 10px 10%;
+    padding: 1rem 10%;
     /* background: #0F0F11; */
 }
 
@@ -52,19 +51,25 @@ nav{
 }
 
 .logo{
-    width: 75px;
+    width: 5rem;
+    transition: transform 300ms ease-in-out, filter 300ms ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 0.6rem #A867F8cc);
 }
 
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 0.625rem 1.25rem;
 }
 
 nav ul li a{
     color: #F1F1F1;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     position: relative;;
 }
 
@@ -74,17 +79,17 @@ nav ul li a span{
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 10px 15px #7F3DF3aa;
+    text-shadow: 0 0.625rem 1rem #7F3DF3aa;
 }
 
 nav ul li a::after{
     content: '';
     width: 0;
-    height: 3px;
+    height: 0.2rem;
     background: #A867F8;
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -0.375rem;
     transition: 300ms;
 }
 
@@ -94,13 +99,13 @@ nav ul li a:hover::after{
 
 .header-text{
     margin-top: 10%;
-    font-size: 30px;
+    font-size: 1.875rem;
 
 }
 
 .header-text h1 {
-    font-size: 60px;
-    margin-top: 20px;
+    font-size: 3.75rem;
+    margin-top: 1.25rem;
 }
 
 .header-text span{
@@ -109,28 +114,55 @@ nav ul li a:hover::after{
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 10px 15px #7F3DF3aa;
+    text-shadow: 0 0.625rem 1rem #7F3DF3aa;
+    display: inline-block;
+    transition: text-shadow 300ms ease-in-out, transform 300ms ease-in-out;
 }
+
+.header-text span:hover {
+    text-shadow: 0 0.625rem 1.2rem #7F3DF3ff;
+    transform: scale(1.03);
+}
+.cursor{
+    display: inline-block;
+    margin-left: 0.15ch;
+    opacity: 1;
+    animation: blink 1000ms step-end infinite;
+    color: #7F3DF3ff;
+}
+
+@keyframes blink {
+
+    50% {
+      opacity: 0;
+    }
+  }
+
 .btn{
     display: block;
-    margin: 50px auto;
+    margin: 3.125rem auto;
     width: fit-content;
-    border: 1px solid #7F3DF3aa;
-    padding: 14px ;
-    border-radius: 10px;
-    font-size: 16px;
+    border: 0.07rem solid #7F3DF3aa;
+    padding: 0.875rem;
+    border-radius: 0.625rem;
+    font-size: 1rem;
     text-decoration: none;
     color: #F1F1F1;
-    transition: background 300ms;
+    transition: background 300ms ease-in-out, transform 300ms ease-in-out;
 }
 
 .btn:hover{
     background: #7F3DF3aa;
+    transform: scale(1.03);
 }
+.btn:active{
+    transform: scale(0.98);
+}
+
 /* about section */
 
+
 #about{
-    padding: 80px 0px;
     color: #F1F1F1
 }
 
@@ -146,14 +178,14 @@ nav ul li a:hover::after{
 
 .about-col-1 img{
     width: 90%;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     background-color: #0F0F11;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;    
+    transition: box-shadow 300ms ease-in-out, transform 300ms ease-in-out;    
 }
 
 .about-col-1 img:hover {
     background-color: #0F0F11aa;
-    box-shadow: 0 0 16px #7F3DF3aa, 0 0 32px #A867F8aa;
+    box-shadow: 0 0 1rem #7F3DF3aa, 0 0 2rem #A867F8aa;
     transform: scale(1.02);
 }
 
@@ -162,11 +194,11 @@ nav ul li a:hover::after{
 }
 
 .about-col-2 h1{
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 .about-col-2 p{
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .about-col-2 span{
@@ -174,18 +206,18 @@ nav ul li a:hover::after{
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 10px #7F3DF3aa;
+    text-shadow: 0 0 0.625rem #7F3DF3aa;
     font-family: "JetBrains Mono", monospace;
 }
 
 .about-titles{
     display: flex;
-    margin: 20px 0px 40px;
+    margin: 1.25rem 0rem 2.5rem;
 
 }
 
 .about-links{
-    margin-right: 50px;
+    margin-right: 3.125rem;
     font-size: 18;
     font-weight: 100;
     cursor: pointer;
@@ -195,11 +227,11 @@ nav ul li a:hover::after{
 .about-links:after{
    content: '';
    width: 0;
-   height: 3px;
+   height: 0.2rem;
    background: #A867F8;
    position: absolute;
    left: 0;
-   bottom: -8px;
+   bottom: -0.5rem;
    transition: 300ms;
 }
 
@@ -209,11 +241,11 @@ nav ul li a:hover::after{
 
 .about-contents ul li{
     list-style: none;
-    margin: 10px
+    margin: 0.625rem
 }
 
 .about-contents ul li span{
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .about-contents{
@@ -226,40 +258,35 @@ nav ul li a:hover::after{
 
 /* technologies */
 
-#technologies{
-    padding: 30px 0;
-}
-
 .technologies-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2.5rem;
+    margin-top: 3.125rem;
 }
 
 .technologies-list div{
     background: #0F0F11;
-    padding: 40px;
-    font-size: 12px;
-    border-radius: 20px;
-    border-right: 10px;
-    transition: background 300ms, transform 300ms;
+    padding: 2.5rem;
+    font-size: 0.75rem;
+    border-radius: 1.25rem;
+    transition: background 300ms ease-in-out, transform 300ms ease-in-out;
 }
 
 .technologies-list div:hover{
     background: #7F3DF3aa;
-    transform: translateY(-15px);
+    transform: translateY(-1rem);
 }
 
 .technologies-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
+    font-size: 3.125rem;
+    margin-bottom: 1.875rem;
 }
 
 .technologies-list div h2{
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 100;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
 }
 
 .technologies-list p{
@@ -268,35 +295,32 @@ nav ul li a:hover::after{
 
 /* portfolio section */
 
-#portfolio{
-    padding: 50px 0;
-}
-
 .project-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    grid-gap: 2.5rem;
+    margin-top: 3.125rem;
 }
 
 .project{
-    border-radius: 10px;
+    border-radius: 0.625rem;
     position: relative;
     overflow: hidden;
 }
 
 .project img{
     width: 100%;
-    border-radius: 10px;
+    height: auto;
+    border-radius: 0.625rem;
     display: block;
-    transition: transform 300ms; 
+    transition: transform 300ms ease-in-out; 
 }
 
 .layer{
     width: 100%;
     height: 0%;
     background: linear-gradient(rgba(0,0,0,0.6),#0F0F11);
-    border-radius: 10px;
+    border-radius: 0.625rem;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -305,29 +329,59 @@ nav ul li a:hover::after{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 2.5rem;
     text-align: center;
-    font-size: 10px;
+    font-size: 0.625rem;
     font-weight: 100;
     transition: height 300ms;
+    opacity: 0;
+    transition: height 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.project:hover .layer {
+    height: 100%;
+    opacity: 1; 
+}
+
+.layer h3,
+.layer p,
+.layer a {
+    transform: translateY(15px); 
+    opacity: 0;
+    transition: all 400ms ease-in-out 150ms; 
+}
+
+.project:hover .layer h3,
+.project:hover .layer p,
+.project:hover .layer a {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.layer a i {
+     transition: transform 200ms ease-in-out;
+}
+.layer a:hover i {
+     transform: scale(1.15) rotate(5deg);
 }
 
 .layer h3{
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     background: linear-gradient(135deg, #B667F1, #C58BFF);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 10px #7F3DF3aa;
+    text-shadow: 0 0 0.625rem #7F3DF3aa;
     font-family: "JetBrains Mono", monospace;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .layer a{
-    margin-top: 30px;
+    margin-top: 1.875rem;
     color: #7F3DF3aa;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 1.375rem;
 }
 
 .project:hover img{
@@ -336,4 +390,109 @@ nav ul li a:hover::after{
 
 .project:hover .layer{
     height: 100%;
+}
+
+/* contaccts */
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 1.875rem;
+}
+
+.contact-left p i{
+    color: #A867F8aa;
+    margin-right: 1rem;
+    font-size: 15;
+}
+
+.social-icons{
+    margin: 1.875rem 0rem; 
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 1.875rem;
+    margin-right: 1rem;
+    color: #F1F1F1;
+    display: inline-block; 
+    transition: transform 300ms;
+}
+
+.social-icons a:hover{
+    color: #A867F8aa;
+    transform: translateY(-0.3rem);
+}
+
+
+.btn.btn2{
+    display: inline-block;
+    background: none;
+    margin: 3.125rem auto;
+    width: fit-content;
+    border: 0.07rem solid #7F3DF3aa;
+    padding: 0.875rem ;
+    border-radius: 0.625rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #F1F1F1;
+    transition: background 300ms;
+}
+
+.btn.btn2:hover{
+    background: #7F3DF3aa;
+}
+
+.btn.btn2:active{
+    transform: scale(0.98);
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #0F0F11aa;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: #F1F1F1;
+    font-size: 0.875rem;
+    border-radius: 0.625rem;
+}
+
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background: #0F0F11aa;
+    font-weight: 100;
+    margin-top: 1rem
+}
+.copyright img{
+    width: 2.5%;
+}
+.copyright p{
+    align-items: center;
+}
+
+#msg{
+    color: #6EF3A5;
+    margin-top: -2.5rem;
+    display: block;
+}
+
+/* mobile viewport (or just small screens???) */
+
+@media only screen and (max-width: 600px){
+
 }

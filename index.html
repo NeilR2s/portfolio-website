@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/960cb323e7.js" crossorigin="anonymous"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <title>Artus Portfolio</title>
 
     </head>
@@ -15,21 +16,21 @@
 
         <!-- HEADER STUFF -->
 
-        <div id="header">
+        <div id="header" data-aos="fade-up">
             <div class="container">
                 <nav>
                     <img src = "assets/logo-transparent.png" class = "logo">
                     <ul>
-                        <li><a href = "#about">About Me</a></li>
-                        <li><a href = "https://github.com/NeilR2s">Github</a></li>
-                        <li><a href = "https://www.linkedin.com/in/neil-artus-652115304 ">Linkedin</a></li>
-                        <li><a href = "#">Email Me</a></li>
+                        <li><a href = "#about">About</a></li>
+                        <li><a href = "#technologies">Technologies</a></li>
+                        <li><a href = "#portfolio">Projects</a></li>
+                        <li><a href = "#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="header-text">
                     <p>Backend Developer</p>
-                    <h1>Hello! I am <span>Neil</span><h1>
-                    <a href="#" class="btn">Download Resume</a>
+                    <h1>Hello! I am <span>Neil</span><span class="cursor">|</span></h1>
+                    <a href="assets/neil-artus-resume.pdf" download class="btn">Download Resume</a>
                 </div>
             </div>
         <div>
@@ -41,11 +42,11 @@
 
                 <div class="row">
 
-                    <div class="about-col-1">
+                    <div class="about-col-1" data-aos="fade-right" data-aos-delay="100">
                         <img src="assets/profile.png">
                     </div>
 
-                    <div class="about-col-2">
+                    <div class="about-col-2" data-aos="fade-left" data-aos-delay="200">
 
                         <h1>About Me</h1>
                         <p>Pragmatic <span>Backend Developer</span> with expertise in AI-powered web applications, backend systems, and data science.</p>
@@ -94,7 +95,7 @@
 
             <h1>Technologies</h1>
 
-            <div class="technologies-list">
+            <div class="technologies-list" data-aos="fade-up">
 
                 <div>
                     <i class="fa-solid fa-code"></i>
@@ -127,84 +128,106 @@
             <h1>Projects</h1>
             <div class="project-list">
 
-                <div class="project">
+                <div class="project" class="project" data-aos="zoom-in" data-aos-delay="100">
                     <img src="assets/dfa.png">
                     <div class="layer">
                         <h3>DFA Compiler</h3>
                         <p>Compiles, simulates, and visualizes Deterministic Finite Automata. Built on Flask, HTML, CSS, and Node JS.</p>
-                        <a href="https://nr2s.pythonanywhere.com"><i class="fa-solid fa-up-right-from-square"></i></i></a>
+                        <a href="https://nr2s.pythonanywhere.com"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project" class="project" data-aos="zoom-in" data-aos-delay="200">
                     <img src="assets/mediseen.png">
                     <div class="layer">
                         <h3>MediSeen</h3>
                         <p>One-tap AI prescription support for essential medicines. Powered by Flask, PyTorch, and SpaCy.</p>
-                        <a href="https://youtube.com/shorts/WhJr4YiGoL4?feature=share"><i class="fa-solid fa-up-right-from-square"></i></i></a>
+                        <a href="https://youtube.com/shorts/WhJr4YiGoL4?feature=share"><i class="fa-solid fa-up-right-from-square"><</i></a>
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project" class="project" data-aos="zoom-in" data-aos-delay="300">
                     <img src="assets/rpi.png">
                     <div class="layer">
                         <h3>Osteoarthritis Detection</h3>
                         <p>Convolutional Neural Network on Raspberri Pi 5 for osteoarthritis detection. Powered by Tensorflow.</p>
-                        <a href="https://youtube.com/shorts/WhJr4YiGoL4?feature=share"><i class="fa-solid fa-code"></i></i></a>
+                        <a href="https://github.com/NeilR2s/tf-osteoarthritis"><i class="fa-solid fa-code"></i></a>
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project" class="project" data-aos="zoom-in" data-aos-delay="400">
                     <img src="assets/nns.png">
                     <div class="layer">
                         <h3>Neural Networks from Scratch</h3>
                         <p>Implementations of fundamental Machine Learning Algorithms using Python and NumPy.</p>
-                        <a href="https://youtube.com/shorts/WhJr4YiGoL4?feature=share"><i class="fa-solid fa-code"></i></i></a>
+                        <a href="https://github.com/NeilR2s/Neural-Networks"><i class="fa-solid fa-code"></i></a>
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project" class="project" data-aos="zoom-in" data-aos-delay="500">
                     <img src="assets/imgproc.png">
                     <div class="layer">
                         <h3>Image Processing</h3>
                         <p>Scripts for processing images using OpenCV. Includes denoising, image segmentation, edge detection.</p>
-                        <a href="https://youtube.com/shorts/WhJr4YiGoL4?feature=share"><i class="fa-solid fa-code"></i></i></a>
+                        <a href="https://github.com/NeilR2s/Computer-Vision"><i class="fa-solid fa-code"></i></a>
                     </div>
                 </div>
 
-                <div class="project">
+                <div class="project" class="project" data-aos="zoom-in" data-aos-delay="600">
                     <img src="assets/covid.png">
                     <div class="layer">
                         <h3>COVID-19 EDA</h3>
                         <p>Data Cleaning and Visualization of three million COVID-19 cases in the Philippines.</p>
-                        <a href="https://youtube.com/shorts/WhJr4YiGoL4?feature=share"><i class="fa-solid fa-code"></i></i></a>
+                        <a href="https://github.com/NeilR2s/COVID-Philippines"><i class="fa-solid fa-code"></i></a>
                     </div>
                 </div>
 
-                
-
             </div>
+            <a href="https://github.com/NeilR2s" class="btn"><i class="fa-brands fa-github"></i> More Projects</a>
         </div>
-
     </div>
 
     <!-- contact -->
 
-    <div class="contact">
+    <div id="contact">
         <div class="container">
             <div class="row">
-                <div class="contact-left">
 
+                <div class="contact-left" data-aos="fade-left" data-aos-delay="100">
+                    <h1>Contact Me!</h1>
+                    <p><i class="fa-solid fa-envelope"></i> neil.c.artus@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/neil-artus-652115304"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/NeilR2s"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.facebook.com/neil.r2s/"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
                 </div>
-                <div class="contact-right">
-                    
+        
+
+                <div class="contact-right" data-aos="fade-right" data-aos-delay="200">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Juan Dela Cruz" required>
+                        <input type="text" name="Email" placeholder="email@example.com" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
+        <div class="copyright">
+            <p><i src="assets/logo-transparent.png"></i>Neil Artus | Last Updated: April 2025</p>
+        </div>    
     </div>
-
     </body>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // Animation duration
+            once: true // Only animate once
+        });
+    </script>
     <script>
         let aboutLinks =  document.getElementsByClassName("about-links")
         let aboutContents =  document.getElementsByClassName("about-contents")
@@ -221,5 +244,22 @@
         }
     </script>
 
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxMeVY-tzpHuJWqKN6_lgW2v85gnNDapRJSH-cISi_dSxs-MeBLRgF6tG3ROn1boO50/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 
 </html>
