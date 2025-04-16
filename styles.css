@@ -493,6 +493,224 @@ form input, form textarea{
 
 /* mobile viewport (or just small screens???) */
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
 
+    /* Header & Navigation */
+    #header {
+        height: auto;
+        padding-bottom: 4rem; 
+    }
+    .container {
+        padding: 1rem 5%; 
+    }
+    nav {
+        position: relative; 
+    }
+    .logo {
+        width: 4rem; 
+        z-index: 101; 
+        position: relative; 
+    }
+    nav .menu-icon { 
+        display: block;
+        font-size: 1.8rem;
+        color: #F1F1F1;
+        cursor: pointer;
+        z-index: 101;
+        position: relative; 
+    }
+    nav ul {
+        background: #1a1a1d; 
+        position: fixed; 
+        top: 0;
+        right: -250px; 
+        width: 250px;
+        height: 100vh;
+        padding-top: 4rem;
+        z-index: 100;
+        transition: right 0.5s ease-in-out; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    nav ul.active { 
+        right: 0;
+    }
+    nav ul li {
+        display: block; 
+        margin: 1.5rem 0; 
+    }
+    nav ul li a {
+        font-size: 1.1rem;
+    }
+    nav ul li a::after {
+        bottom: -0.3rem; 
+    }
+    nav ul .close-icon { 
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem; 
+        font-size: 1.8rem;
+        color: #F1F1F1;
+        cursor: pointer;
+    }
+    .header-text {
+        margin-top: 25%;
+        font-size: 1.25rem; 
+    }
+    .header-text h1 {
+        font-size: 2.5rem; 
+    }
+    .cursor { 
+       font-size: 2.5rem; 
+       margin-left: 0.05ch;
+    }
+
+    /* Section Padding */
+    #about,
+    #technologies,
+    #portfolio,
+    #contact {
+        padding: 3rem 0; 
+    }
+
+    /* About Section */
+    .row {
+        flex-direction: column; 
+        gap: 2rem;
+    }
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%; 
+    }
+    .about-col-1 {
+        order: 1; 
+        text-align: center; 
+    }
+    .about-col-1 img {
+        width: 70%; 
+        max-width: 250px; 
+        margin: 0 auto; 
+    }
+    .about-col-2 {
+        order: 2;
+        text-align: center; 
+    }
+    .about-col-2 h1 {
+        font-size: 1.5rem; 
+        margin-bottom: 1rem;
+    }
+    .about-titles {
+        justify-content: center; 
+        margin: 1rem 0 1.5rem;
+        flex-wrap: wrap; 
+        gap: 1rem;
+    }
+    .about-links {
+        margin-right: 0; 
+        font-size: 1rem; 
+    }
+    .about-contents ul li {
+         text-align: left; 
+         margin: 0.8rem auto; 
+         max-width: 90%; 
+    }
+
+    /* Technologies Section */
+    .technologies-list {
+        grid-template-columns: 1fr; 
+        grid-gap: 1.5rem; 
+        margin-top: 2rem;
+    }
+    .technologies-list div {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .technologies-list div:hover {
+        transform: translateY(-0.5rem); 
+    }
+    .technologies-list div i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .technologies-list div h2 {
+        font-size: 1.3rem; 
+    }
+
+    /* Portfolio Section */
+    .project-list {
+        grid-template-columns: 1fr; 
+        grid-gap: 1.5rem; 
+        margin-top: 2rem;
+    }
+    .layer {
+        padding: 0 1.5rem; 
+        font-size: 0.75rem; 
+    }
+    .layer h3 {
+        font-size: 1.1rem; 
+    }
+    .layer p {
+        font-size: 0.8rem; 
+    }
+    .layer a {
+        font-size: 1.5rem; 
+        margin-top: 1rem;
+    }
+    #portfolio .btn { 
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Contact Section */
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%; 
+    }
+    .contact-left {
+        order: 1;
+        text-align: center;
+    }
+    .contact-left h1 {
+        font-size: 1.5rem;
+    }
+    .contact-left p {
+        font-size: 0.9rem; 
+        margin-top: 1rem;
+    }
+    .social-icons {
+        margin: 1.5rem 0;
+        justify-content: center; 
+    }
+    .social-icons a {
+        font-size: 1.5rem; 
+        margin: 0 0.5rem; 
+    }
+    .contact-right {
+        order: 2;
+    }
+    form input, form textarea {
+        font-size: 0.9rem; 
+    }
+    .btn.btn2 { 
+        padding: 0.8rem 1.8rem;
+        margin: 1.5rem auto 0 auto; 
+        font-size: 1rem;
+    }
+    #msg {
+        margin-top: 1rem;
+        text-align: center; 
+        font-size: 0.9rem;
+    }
+
+    /* Copyright */
+    .copyright {
+        font-size: 0.7rem;
+        padding: 0.8rem;
+    }
+    .copyright img { 
+       width: 5%;
+       max-height: 1em;
+    }
 }
