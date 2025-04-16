@@ -68,6 +68,15 @@ nav ul li a{
     position: relative;;
 }
 
+nav ul li a span{
+    font-weight: bold;
+    background: linear-gradient(135deg, #B667F1, #C58BFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 10px 15px #7F3DF3aa;
+}
+
 nav ul li a::after{
     content: '';
     width: 0;
@@ -84,7 +93,7 @@ nav ul li a:hover::after{
 }
 
 .header-text{
-    margin-top: 15%;
+    margin-top: 10%;
     font-size: 30px;
 
 }
@@ -102,7 +111,22 @@ nav ul li a:hover::after{
     -webkit-text-fill-color: transparent;
     text-shadow: 0 10px 15px #7F3DF3aa;
 }
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #7F3DF3aa;
+    padding: 14px ;
+    border-radius: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #F1F1F1;
+    transition: background 300ms;
+}
 
+.btn:hover{
+    background: #7F3DF3aa;
+}
 /* about section */
 
 #about{
@@ -128,6 +152,7 @@ nav ul li a:hover::after{
 }
 
 .about-col-1 img:hover {
+    background-color: #0F0F11aa;
     box-shadow: 0 0 16px #7F3DF3aa, 0 0 32px #A867F8aa;
     transform: scale(1.02);
 }
@@ -218,10 +243,12 @@ nav ul li a:hover::after{
     font-size: 12px;
     border-radius: 20px;
     border-right: 10px;
+    transition: background 300ms, transform 300ms;
 }
 
 .technologies-list div:hover{
     background: #7F3DF3aa;
+    transform: translateY(-15px);
 }
 
 .technologies-list div i{
@@ -237,4 +264,76 @@ nav ul li a:hover::after{
 
 .technologies-list p{
     font-family: "JetBrains Mono", monospace;
+}
+
+/* portfolio section */
+
+#portfolio{
+    padding: 50px 0;
+}
+
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.project{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 300ms; 
+}
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6),#0F0F11);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 100;
+    transition: height 300ms;
+}
+
+.layer h3{
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #B667F1, #C58BFF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px #7F3DF3aa;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+}
+
+.layer a{
+    margin-top: 30px;
+    color: #7F3DF3aa;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.project:hover img{
+    transform: scale(1.1);
+}
+
+.project:hover .layer{
+    height: 100%;
 }
